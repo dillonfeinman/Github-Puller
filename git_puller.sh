@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-if [ ! -d "/home/dillon/Desktop/Projects/Git\ Puller/repos" ]
+DIR="$(pwd)"
+
+if [ ! -d "$DIR"/repos ]
 then
+    echo "Creating repos folder..."
     mkdir repos
 fi
+
 
 cd src
 
@@ -17,7 +21,7 @@ cd ..
 
 cd repos
 
-for i in `cat /home/dillon/Desktop/Projects/Git\ Puller/src/split_repos.txt`
+for i in `cat "$DIR"/src/split_repos.txt`
 do
     git clone $i
 done
