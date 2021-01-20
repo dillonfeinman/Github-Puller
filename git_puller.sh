@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cd /home/dillon/Desktop/Projects/Git\ Puller
-
 if [ ! -d "/home/dillon/Desktop/Projects/Git\ Puller/repos" ]
 then
     mkdir repos
